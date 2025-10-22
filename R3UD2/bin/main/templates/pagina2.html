@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Página2</title>
+</head>
+<body>
+	<form th:action="@{/pagina3}" method="post">
+	    <input type="hidden" name="nombre" th:value="${nombre}">
+	    
+	    <select name="ciudad" required>
+	        <option value="ciudadvalor">Selecciona ciudad</option>
+	        <option value="Madrid">Madrid</option>
+	        <option value="Vigo">Vigo</option>
+	        <option value="Barcelona">Barcelona</option>
+	        <option value="Santander">Santander</option>
+	    </select><br><br>
+	    <button type="submit">Pagina 3</button>
+	</form>
+</body>
+</html>
