@@ -6,7 +6,7 @@
 </head>	
 <body>
 	<h1>Resultado</h1>
-    <h1 th:text="#{saludar}">Mensaje por defecto</h1>
+    <h1 th:text="#{saludar}">Mensaje</h1>
 		<p>
 			Texto: <span th:text="${texto}"></span>
 		</p>	
@@ -18,5 +18,6 @@
 		<p th:if="${mensaje}" th:text="${mensaje}"></p>
 
 </body>
+
 
 </html>
