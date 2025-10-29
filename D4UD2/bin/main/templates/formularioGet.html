@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario 4 tema 2</title>
+</head>	
+<body>
+	<h1>Pruebas</h1>
+    <h1 th:text="#{saludar}">Mensaje por defecto</h1>
+	
+	<form action="/enviarGet" method="get">
+		<label>Introduce texto</label>
+		<input type="text" name="texto">
+		
+		<button type="submit" name="enviar">Enviar</button>
+	</form>		
+	
+
+</body>
+
+</html>
