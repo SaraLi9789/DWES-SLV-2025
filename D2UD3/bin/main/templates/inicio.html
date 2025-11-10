@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+</head>
+<body>
+<h1 th:text="'Bienvenido, ' + ${usuario} + ' Estás en Inicio'"></h1>
+	
+
+<a href="/pagina1"> Ir a Pagina 1</a>
+<br>
+<a href="/pagina2">Ir a pagina 2</a>
+
+<br>
+
+<form action="/cerrarSesion" method="get">
+    <button type="submit">Cerrar sesión</button>
+</form>
+
+
+</body>
+</html>
