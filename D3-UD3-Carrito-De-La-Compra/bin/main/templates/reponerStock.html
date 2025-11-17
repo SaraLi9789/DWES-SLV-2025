@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reponer Stock</title>
+</head>
+<body>
+
+<h2>Reponer Stock</h2>
+
+<p th:if="${mensaje}" th:text="${mensaje}"></p>
+
+<form action="/reponer" method="post">
+    <p th:each="producto : ${stock}">
+        <p th:text="${producto.key}"></p>
+       <label>cantidad:</label>
+		 <input type="text" th:name="${producto.key}">
+    </p>
+    <button type="submit">Actualizar</button>
+</form>
+
+
+</body>
+</html>

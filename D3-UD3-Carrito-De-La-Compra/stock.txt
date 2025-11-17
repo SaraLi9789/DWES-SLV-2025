@@ -1,0 +1,5 @@
+Camiseta:28
+Falda:4
+Perfume:10
+Pantalón vaquero:7
+Vestido:10
