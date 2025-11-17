@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Modificar Carrito</title>
+</head>
+<body>
+
+<h2>Modificar carrito</h2>
+
+<h2>Hola [[${nombre}]], bienvenido a la tienda</h2>
+
+<form action="/actualizar" method="post">
+    <p th:each="producto : ${stock}">
+        [[${producto.key}]]
+        <input type="text" name="cantidades"/>
+        <input type="hidden" name="productos" th:value="${producto.key}"/>
+    </p>
+    <button type="submit">Actualizar carrito</button>	
+</form>
+
+
+
+<form action="/finalizar" method="post">
+    <p th:each="producto : ${stock}">
+        <input type="hidden" name="productos" th:value="${producto.key}"/>
+        <input type="hidden" name="cantidades" th:value="${carrito[producto.key]}"/>
+    </p>
+    <button type="submit">Finalizar carrito</button>
+</form>
+
+
+
+<p th:if="${mensaje}" th:text="${mensaje}"></p>
+
+<h3>Stock actual:</h3>
+<p th:each="producto : ${stock}" th:text="${producto.key + ' : ' + producto.value}"></p>
+
+</body>
+</html>
+
