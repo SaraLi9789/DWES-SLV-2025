@@ -89,7 +89,7 @@ public class ControllerSesion {
 		}
 
 		if (numEtapa == 3 && (aficciones == null || aficciones.isBlank())) {
-			errores = "Debes elegir al menos una aficción, no seas soso/a";
+			errores = "Debes elegir al menos una aficción";
 		}
 
 		if (!errores.isBlank()) {
